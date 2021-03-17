@@ -20,8 +20,6 @@ def createpeople():
 
     pessoa['telefone'] = telefone
 
-    print(pessoa)
-
     return pessoa
 
 def loadpeopletojson(listadepessoas):

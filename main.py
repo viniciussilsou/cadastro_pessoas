@@ -16,9 +16,8 @@ def printarquivo():
         pessoas = json.load(arquivo)
 
     for pessoa in pessoas:
-
-        for c,v in pessoa.items():
-            print(c,v)
+        for c, v in pessoa.items():
+            print('{}:{}'.format(c,v))
 
 printarquivo()
 
