@@ -19,7 +19,20 @@ def printarquivo():
         for c, v in pessoa.items():
             print('{}:{}'.format(c,v))
 
-printarquivo()
+
+def buscarpessoaporcpf():
+
+    with open('cadastro_pessoas.json') as arquivo:
+
+        cpfbusca = str(input("Digite o CPF a buscar:"))
+        pessoas = json.load(arquivo)
+        print(pessoas)
+
+    for pessoa in range(len(pessoas)):
+        if cpfbusca == pessoa.values:
+            print(pessoa)
+
+buscarpessoaporcpf()
 
 
 
