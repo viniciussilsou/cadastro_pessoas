@@ -24,10 +24,11 @@ def createpeople():
 
     return pessoa
 
-def loadpeopletojson(listapessoas):
+def loadpeopletojson(listadepessoas):
 
-    with open("cadastro_pessoas.json") as arquivojson:
-       arquivodump = json.dumps(listadepessoas)
+    with open("cadastro_pessoas.json",'w') as arquivojson:
+
+        arquivodump = json.dumps(listadepessoas)
         arquivojson.write(arquivodump)
 
 
