@@ -9,9 +9,8 @@ def buscarpessoaporcpf():
 
     for pessoa in pessoas:
         if cpfbusca == pessoa.get("cpf"):
-            print(pessoa)
-
-
+            for c, v in pessoa.items():
+                print('{}:{}'.format(c, v))
 
 
 

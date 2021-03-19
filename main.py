@@ -3,24 +3,30 @@ from buscar_pessoa import buscarpessoaporcpf
 import json
 
 
-def createnewperson():
+def selecionarfuncao():
 
-    lista = carrregajsonparaarquivo()
-    novapessoa = createpeople()
-    lista.append(novapessoa)
-    loadpeopletojson(lista)
+    func = input("SELECIONE:\n"
+                 "1 - NOVO CADASTRO\n"
+                 "2 - BUSCAR CADASTRO\n"
+                 "3 - EXLCUIR CADASTRO\n")
 
-def printarquivo():
+    return func
 
-    with open('cadastro_pessoas.json') as arquivo:
+def cadastropessoas():
 
-        pessoas = json.load(arquivo)
+    funcao = selecionarfuncao()
 
-    for pessoa in pessoas:
-        for c, v in pessoa.items():
-            print('{}:{}'.format(c,v))
+    if funcao == 1:
 
-buscarpessoaporcpf()
+        lista = carrregajsonparaarquivo()
+        novapessoa = createpeople()
+        lista.append(novapessoa)
+        loadpeopletojson(lista)
+
+
+
+
+
 
 
 
