@@ -24,12 +24,12 @@ def buscarpessoaporcpf():
 
     with open('cadastro_pessoas.json') as arquivo:
 
-        cpfbusca = str(input("Digite o CPF a buscar:"))
+        cpfbusca = input("Digite o CPF a buscar:")
         pessoas = json.load(arquivo)
-        print(pessoas)
 
-    for pessoa in range(len(pessoas)):
-        if cpfbusca == pessoa.values:
+
+    for pessoa in pessoas:
+        if cpfbusca == pessoa.get("cpf"):
             print(pessoa)
 
 buscarpessoaporcpf()
