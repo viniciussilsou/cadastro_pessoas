@@ -1,4 +1,5 @@
 from cadastroPessoas import carrregajsonparaarquivo,createpeople,loadpeopletojson
+from buscar_pessoa import buscarpessoaporcpf
 import json
 
 
@@ -19,20 +20,9 @@ def printarquivo():
         for c, v in pessoa.items():
             print('{}:{}'.format(c,v))
 
-
-def buscarpessoaporcpf():
-
-    with open('cadastro_pessoas.json') as arquivo:
-
-        cpfbusca = input("Digite o CPF a buscar:")
-        pessoas = json.load(arquivo)
-
-
-    for pessoa in pessoas:
-        if cpfbusca == pessoa.get("cpf"):
-            print(pessoa)
-
 buscarpessoaporcpf()
+
+
 
 
 
