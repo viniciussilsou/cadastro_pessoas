@@ -12,9 +12,9 @@ def createpeople():
     pessoa = {}
     telefone = {}
 
-    pessoa['cpf'] = input("Digite cpf:\n")
-    pessoa['nome'] = input("Digite nome:\n")
-    pessoa['idade'] = input("Qual idade:\n")
+    pessoa['cpf'] = input("Digite CPF:\n")
+    pessoa['nome'] = input("Digite Nome:\n")
+    pessoa['idade'] = input("Qual Idade:\n")
     telefone['ddd'] = input("Digite DDD\n")
     telefone['Número'] = input("Digite Telefone:\n")
 
@@ -26,7 +26,7 @@ def loadpeopletojson(listadepessoas):
 
     with open("cadastro_pessoas.json",'w') as arquivojson:
 
-        arquivodump = json.dumps(listadepessoas)
+        arquivodump = json.dumps(listadepessoas, indent=4)
         arquivojson.write(arquivodump)
 
 

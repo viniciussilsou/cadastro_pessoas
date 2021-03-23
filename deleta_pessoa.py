@@ -18,7 +18,7 @@ def deletarpessoa():
 
     with open("cadastro_pessoas.json",'w') as arquivojson:
 
-        arquivodump = json.dumps(jsonpessoa)
+        arquivodump = json.dumps(jsonpessoa, indent=4)
         arquivojson.write(arquivodump)
 
 
