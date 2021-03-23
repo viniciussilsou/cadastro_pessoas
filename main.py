@@ -29,6 +29,11 @@ def cadastropessoas():
     elif funcao == 3:
         deletarpessoa()
 
+    else:
+
+        print("Função Invalida !\n")
+        cadastropessoas()
+
 
 cadastropessoas()
 
