@@ -12,7 +12,8 @@ def createpeople():
     pessoa = {}
     telefone = {}
 
-    pessoa['cpf'] = input("Digite CPF:\n")
+    pessoa['cpf'] = input("-------NOVO CADASTRO--------\n\n"
+                          "Digite CPF:\n")
     pessoa['nome'] = input("Digite Nome:\n")
     pessoa['idade'] = input("Qual Idade:\n")
     telefone['ddd'] = input("Digite DDD\n")

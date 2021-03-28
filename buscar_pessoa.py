@@ -11,6 +11,16 @@ def buscarpessoaporcpf():
         if cpfbusca == pessoa.get("cpf"):
             for c, v in pessoa.items():
                 print('{}:{}'.format(c, v))
+    else:
+        print("CPF não encontrado !\n")
+        repetir = int(input("Deseja realizar nova busca?\n 1-SIM\n 2-NÃO\n"))
+
+        if repetir == 1:
+            buscarpessoaporcpf()
+        else:
+            exit()
+
+
 
 
 
